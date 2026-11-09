@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2f4eb" />
+    <meta name="description" content="A simple planner for focused study sessions." />
+    <title>Study Sprint | Make room to focus</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/controller.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="Study Sprint home">
+        <span class="wordmark__mark" aria-hidden="true">S</span>
+        <span>study<span class="wordmark__light">sprint</span></span>
+      </a>
+      <p class="topbar__note">A little progress, on purpose.</p>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">YOUR STUDY DESK</p>
+          <h1 id="page-title">Make room<br />to <em>focus.</em></h1>
+        </div>
+        <p class="intro__copy">Turn the next small task into a finished one.<br />Your plan stays right here on this device.</p>
+      </section>
+
+      <section class="dashboard panel" aria-label="Study progress">
+        <div class="dashboard__heading">
+          <p class="eyebrow">AT A GLANCE</p>
+          <span class="live-dot" aria-hidden="true"></span>
+        </div>
+        <div class="dashboard__content" data-view="dashboard">
+          <p class="loading-note">Gathering your study plan...</p>
+        </div>
+      </section>
+
+      <div class="work-area">
+        <section class="task-editor panel" aria-labelledby="editor-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">START SMALL</p>
+              <h2 id="editor-title">Add a study task</h2>
+            </div>
+            <span class="section-index">01</span>
+          </div>
+          <div data-view="form"></div>
+        </section>
+
+        <section class="task-board" aria-labelledby="tasks-title">
+          <div class="section-heading task-board__heading">
+            <div>
+              <p class="eyebrow">THE PLAN</p>
+              <h2 id="tasks-title">Your study list</h2>
+            </div>
+            <span class="section-index">02</span>
+          </div>
+          <div class="task-list" data-view="tasks" aria-live="polite">
+            <p class="loading-note">Loading tasks...</p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="page-footer">
+        <span>Built for steady progress.</span>
+        <span class="page-footer__rule" aria-hidden="true"></span>
+        <span>One sprint at a time</span>
+      </footer>
+    </main>
+  </body>
+</html>
